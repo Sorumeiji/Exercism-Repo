@@ -2,17 +2,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <title>Functions: Task 1</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="../styles.css" /> -->
 </head>
 
 <body>
-    <h1>Hello</h1>
-    <button>Click</button>
 
+    <section class="preview">
 
-    <script src="./functions.js"></script>
+    </section>
+
 </body>
+<script>
+    let names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+    let para = document.createElement('p');
+    // var displayName = () => document.createTextNode(chooseName(names));
+    let paraContent = para.appendChild(displayName());
+
+
+
+
+    function chooseName(listOfNames) {
+        let randomNumberFromList = Math.floor(Math.random() * names.length);
+        console.log(listOfNames[randomNumberFromList]);
+        return listOfNames[randomNumberFromList];
+    }
+
+    function displayName() {
+        return document.createTextNode(chooseName(names));
+    }
+
+    // Don't edit the code below here!
+    const section = document.querySelector('section');
+
+    section.appendChild(para);
+</script>
 
 </html>
